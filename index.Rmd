@@ -74,7 +74,7 @@ aObservable.map(x -> x*x) //Square
 
 * Writing concurrent programs correct is difficult.
 
-* You can transforme & compose  asynchronous operations.
+* You can transform & compose  asynchronous operations.
     
 * High-level abstractions    
 
@@ -681,7 +681,7 @@ Observable.switchOnNext(o)
 
 2. RxJava is not just a library. It's a framework!
 
-3. The importantest part is Functional Reactive Thinking.
+3. The most important part is Functional Reactive Thinking.
 
 4. Try It in your next project!
 

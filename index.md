@@ -232,7 +232,7 @@ Observable<String> ob2 = Observable.just("Some String");
 ```
 
 ---
-## Creating Observable - Others...
+## Creating Observable ...
 
 * repeat( )
 
@@ -245,6 +245,8 @@ Observable<String> ob2 = Observable.just("Some String");
 * empty( )
 
 * error( )
+
+https://github.com/ReactiveX/RxJava/wiki/Creating-Observables
 
 ---
 ## Hot and Cold Observables
@@ -302,7 +304,7 @@ Observable.range(1, 3)
 3
 3
 ```
->> * <gg> Observable is <r>*Monad*</r> </gg>
+>> * <gg> Observable is a <r>*Monad*</r> </gg>
      - unit (return) ==> **just**
      - join (bind, >>=) ==> **flatmap**
 

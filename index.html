@@ -81,10 +81,8 @@ img[alt=marble] {  margin-left: auto;margin-right: auto;width: 800px; }
 
 <h2>About Me</h2>
 
-<!-- 
-
-Sam Lee (misgod.tw@gmail.com)
-<br/>
+<p>Sam Lee (<a href="mailto:misgod.tw@gmail.com">misgod.tw@gmail.com</a>)
+<br/></p>
 
 <ul class="build fade">
  <li>A software engineer lives in Tainan</li>
@@ -93,7 +91,6 @@ Sam Lee (misgod.tw@gmail.com)
  <li>Interested in Functional Programming</li>
  <li>Interested in Machine Learning and Data Analyst </li>
 </ul>
--->
 
   </article>
   <!-- Presenter Notes -->
@@ -262,7 +259,33 @@ Sam Lee (misgod.tw@gmail.com)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue dark" id="slide-9" style="background:;">
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Observer pattern</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/observabl_pattern.png" alt="marble"></p>
+
+<p><em>image from <a href="http://slides.com/yaroslavheriatovych/frponandroid">http://slides.com/yaroslavheriatovych/frponandroid</a></em></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Functional Reactive</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/reactive_pattern.png" alt="marble"></p>
+
+<p><em>image from <a href="http://slides.com/yaroslavheriatovych/frponandroid">http://slides.com/yaroslavheriatovych/frponandroid</a></em></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-11" style="background:;">
   <hgroup>
     <h2>Lambda Expression</h2>
   </hgroup>
@@ -272,7 +295,7 @@ Sam Lee (misgod.tw@gmail.com)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-10" style="background:;">
+<slide class="" id="slide-12" style="background:;">
   <hgroup>
     <h2>Original</h2>
   </hgroup>
@@ -304,7 +327,7 @@ Sam Lee (misgod.tw@gmail.com)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-11" style="background:;">
+<slide class="" id="slide-13" style="background:;">
   <hgroup>
     <h2>Java 8 lambda</h2>
   </hgroup>
@@ -326,7 +349,7 @@ Sam Lee (misgod.tw@gmail.com)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-12" style="background:;">
+<slide class="" id="slide-14" style="background:;">
   <hgroup>
     <h2>Retrolambda</h2>
   </hgroup>
@@ -352,7 +375,7 @@ Sam Lee (misgod.tw@gmail.com)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue dark" id="slide-13" style="background:;">
+<slide class="segue dark" id="slide-15" style="background:;">
   <hgroup>
     <h2>rx.Observable</h2>
   </hgroup>
@@ -362,7 +385,48 @@ Sam Lee (misgod.tw@gmail.com)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-14" style="background:;">
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Creating Observable - just</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="http://github.com/ReactiveX/RxJava/wiki/images/rx-operators/just.png" alt="marble"></p>
+
+<pre><code class="java">Observable&lt;List&lt;String&gt;&gt; ob = Observable.just(aList);
+Observable&lt;String&gt; ob2 = Observable.just(&quot;Some String&quot;);
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Creating Observable - from</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="http://github.com/ReactiveX/RxJava/wiki/images/rx-operators/from.png" alt="marble"></p>
+
+<pre><code class="java">List&lt;String&gt;  aList = ...;
+Observable&lt;String&gt; ob = Observable.from(aList);
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Creating Observable - create</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="http://github.com/ReactiveX/RxJava/wiki/images/rx-operators/create.png" alt="marble"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
   <hgroup>
     <h2>Creating Observable - create</h2>
   </hgroup>
@@ -385,48 +449,7 @@ Sam Lee (misgod.tw@gmail.com)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-15" style="background:;">
-  <hgroup>
-    <h2>Creating Observable - create</h2>
-  </hgroup>
-  <article data-timings="">
-    <p><img src="http://github.com/ReactiveX/RxJava/wiki/images/rx-operators/create.png" alt="marble"></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-16" style="background:;">
-  <hgroup>
-    <h2>Creating Observable - from</h2>
-  </hgroup>
-  <article data-timings="">
-    <p><img src="http://github.com/ReactiveX/RxJava/wiki/images/rx-operators/from.png" alt="marble"></p>
-
-<pre><code class="java">List&lt;String&gt;  aList = ...;
-Observable&lt;String&gt; ob = Observable.from(aList);
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-17" style="background:;">
-  <hgroup>
-    <h2>Creating Observable - just</h2>
-  </hgroup>
-  <article data-timings="">
-    <p><img src="http://github.com/ReactiveX/RxJava/wiki/images/rx-operators/just.png" alt="marble"></p>
-
-<pre><code class="java">Observable&lt;List&lt;String&gt;&gt; ob = Observable.just(aList);
-Observable&lt;String&gt; ob2 = Observable.just(&quot;Some String&quot;);
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-18" style="background:;">
+<slide class="" id="slide-20" style="background:;">
   <hgroup>
     <h2>Creating Observable ...</h2>
   </hgroup>
@@ -446,7 +469,7 @@ Observable&lt;String&gt; ob2 = Observable.just(&quot;Some String&quot;);
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-19" style="background:;">
+<slide class="" id="slide-21" style="background:;">
   <hgroup>
     <h2>Hot and Cold Observables</h2>
   </hgroup>
@@ -467,7 +490,7 @@ Observable&lt;String&gt; ob2 = Observable.just(&quot;Some String&quot;);
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-20" style="background:;">
+<slide class="" id="slide-22" style="background:;">
   <hgroup>
     <h2>Transforming Observables - map</h2>
   </hgroup>
@@ -478,7 +501,7 @@ Observable&lt;String&gt; ob2 = Observable.just(&quot;Some String&quot;);
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-21" style="background:;">
+<slide class="" id="slide-23" style="background:;">
   <hgroup>
     <h2>Transforming Observables - map</h2>
   </hgroup>
@@ -502,7 +525,7 @@ done
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-22" style="background:;">
+<slide class="" id="slide-24" style="background:;">
   <hgroup>
     <h2>Transforming Observables - flatmap</h2>
   </hgroup>
@@ -513,7 +536,7 @@ done
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-23" style="background:;">
+<slide class="" id="slide-25" style="background:;">
   <hgroup>
     <h2>Transforming Observables - flatmap</h2>
   </hgroup>
@@ -546,7 +569,7 @@ done
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-24" style="background:;">
+<slide class="" id="slide-26" style="background:;">
   <hgroup>
     <h2>Transforming Observables - concatmap</h2>
   </hgroup>
@@ -557,7 +580,7 @@ done
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-25" style="background:;">
+<slide class="" id="slide-27" style="background:;">
   <hgroup>
     <h2>Filtering Observables</h2>
   </hgroup>
@@ -568,7 +591,7 @@ done
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-26" style="background:;">
+<slide class="" id="slide-28" style="background:;">
   <hgroup>
     <h2>Filtering Observables</h2>
   </hgroup>
@@ -589,7 +612,7 @@ done
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-27" style="background:;">
+<slide class="" id="slide-29" style="background:;">
   <hgroup>
     <h2>Filtering Observables</h2>
   </hgroup>
@@ -608,7 +631,7 @@ done
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-28" style="background:;">
+<slide class="" id="slide-30" style="background:;">
   <hgroup>
     <h2>Aggregate Operators - reduce</h2>
   </hgroup>
@@ -619,7 +642,7 @@ done
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-29" style="background:;">
+<slide class="" id="slide-31" style="background:;">
   <hgroup>
     <h2>Aggregate Operators - reduce</h2>
   </hgroup>
@@ -636,7 +659,7 @@ done
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-30" style="background:;">
+<slide class="" id="slide-32" style="background:;">
   <hgroup>
     <h2>Aggregate Operators - concat</h2>
   </hgroup>
@@ -647,7 +670,7 @@ done
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-31" style="background:;">
+<slide class="" id="slide-33" style="background:;">
   <hgroup>
     <h2>Combining Observables - merge</h2>
   </hgroup>
@@ -658,7 +681,7 @@ done
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-32" style="background:;">
+<slide class="" id="slide-34" style="background:;">
   <hgroup>
     <h2>Combining Observables - merge</h2>
   </hgroup>
@@ -683,7 +706,7 @@ C
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-33" style="background:;">
+<slide class="" id="slide-35" style="background:;">
   <hgroup>
     <h2>Combining Observables - startWith</h2>
   </hgroup>
@@ -694,7 +717,7 @@ C
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-34" style="background:;">
+<slide class="" id="slide-36" style="background:;">
   <hgroup>
     <h2>Combining Observables - startWith</h2>
   </hgroup>
@@ -718,7 +741,7 @@ c
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-35" style="background:;">
+<slide class="" id="slide-37" style="background:;">
   <hgroup>
     <h2>Combining Observables - zip</h2>
   </hgroup>
@@ -729,7 +752,7 @@ c
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-36" style="background:;">
+<slide class="" id="slide-38" style="background:;">
   <hgroup>
     <h2>Combining Observables - zip</h2>
   </hgroup>
@@ -751,7 +774,7 @@ c_C
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-37" style="background:;">
+<slide class="" id="slide-39" style="background:;">
   <hgroup>
     <h2>Error Handling</h2>
   </hgroup>
@@ -772,7 +795,7 @@ c_C
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-38" style="background:;">
+<slide class="" id="slide-40" style="background:;">
   <hgroup>
     <h2>Threading</h2>
   </hgroup>
@@ -792,7 +815,7 @@ c_C
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-39" style="background:;">
+<slide class="" id="slide-41" style="background:;">
   <hgroup>
     <h2>Subjects</h2>
   </hgroup>
@@ -814,7 +837,7 @@ c_C
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-40" style="background:;">
+<slide class="" id="slide-42" style="background:;">
   <hgroup>
     <h2>Subjects - How to use</h2>
   </hgroup>
@@ -845,7 +868,7 @@ subject.onCompleted();
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue dark" id="slide-41" style="background:;">
+<slide class="segue dark" id="slide-43" style="background:;">
   <hgroup>
     <h2>RxJava on Android</h2>
   </hgroup>
@@ -855,7 +878,7 @@ subject.onCompleted();
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-42" style="background:;">
+<slide class="" id="slide-44" style="background:;">
   <hgroup>
     <h2>About Android Development</h2>
   </hgroup>
@@ -884,7 +907,7 @@ subject.onCompleted();
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-43" style="background:;">
+<slide class="" id="slide-45" style="background:;">
   <hgroup>
     <h2>RxAndroid</h2>
   </hgroup>
@@ -911,7 +934,7 @@ subject.onCompleted();
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue dark" id="slide-44" style="background:;">
+<slide class="segue dark" id="slide-46" style="background:;">
   <hgroup>
     <h2>Let&#39;s Thinking in Functional Reactive</h2>
   </hgroup>
@@ -921,7 +944,7 @@ subject.onCompleted();
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-45" style="background:;">
+<slide class="" id="slide-47" style="background:;">
   <hgroup>
     <h2>Case 1 - Say Hello to Callback Hell</h2>
   </hgroup>
@@ -950,7 +973,7 @@ btnClick.setOnClickListener(new View.OnClickListener() {
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-46" style="background:;">
+<slide class="" id="slide-48" style="background:;">
   <hgroup>
     <h2>Case 1 - Say Hello to Callback Hell</h2>
   </hgroup>
@@ -975,7 +998,7 @@ btnClick.setOnClickListener(new View.OnClickListener() {
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-47" style="background:;">
+<slide class="" id="slide-49" style="background:;">
   <hgroup>
     <h2>Case 1 - Say Goodbye to Callback Hell</h2>
   </hgroup>
@@ -1000,7 +1023,7 @@ ViewObservable.clicks(btnClick)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-48" style="background:;">
+<slide class="" id="slide-50" style="background:;">
   <hgroup>
     <h2>Case 2 - All In One search</h2>
   </hgroup>
@@ -1029,7 +1052,7 @@ Observable.merge(g, b, y)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-49" style="background:;">
+<slide class="" id="slide-51" style="background:;">
   <hgroup>
     <h2>Case 3 - A simple EventBus</h2>
   </hgroup>
@@ -1059,7 +1082,7 @@ subject.onNext(aRefreshAction);
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-50" style="background:;">
+<slide class="" id="slide-52" style="background:;">
   <hgroup>
     <h2>Case 4 - Input Suggestion</h2>
   </hgroup>
@@ -1084,7 +1107,7 @@ Observable.switchOnNext(o)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-51" style="background:;">
+<slide class="" id="slide-53" style="background:;">
   <hgroup>
     <h2>Conclusion</h2>
   </hgroup>
@@ -1169,109 +1192,109 @@ Observable.switchOnNext(o)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='Lambda Expression'>
+        data-slide=9 title='Observer pattern'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='Original'>
+        data-slide=10 title='Functional Reactive'>
          10
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='Java 8 lambda'>
+        data-slide=11 title='Lambda Expression'>
          11
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='Retrolambda'>
+        data-slide=12 title='Original'>
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='rx.Observable'>
+        data-slide=13 title='Java 8 lambda'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='Creating Observable - create'>
+        data-slide=14 title='Retrolambda'>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='Creating Observable - create'>
+        data-slide=15 title='rx.Observable'>
          15
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='Creating Observable - from'>
+        data-slide=16 title='Creating Observable - just'>
          16
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='Creating Observable - just'>
+        data-slide=17 title='Creating Observable - from'>
          17
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='Creating Observable ...'>
+        data-slide=18 title='Creating Observable - create'>
          18
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='Hot and Cold Observables'>
+        data-slide=19 title='Creating Observable - create'>
          19
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='Transforming Observables - map'>
+        data-slide=20 title='Creating Observable ...'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Transforming Observables - map'>
+        data-slide=21 title='Hot and Cold Observables'>
          21
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='Transforming Observables - flatmap'>
+        data-slide=22 title='Transforming Observables - map'>
          22
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=23 title='Transforming Observables - flatmap'>
+        data-slide=23 title='Transforming Observables - map'>
          23
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=24 title='Transforming Observables - concatmap'>
+        data-slide=24 title='Transforming Observables - flatmap'>
          24
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=25 title='Filtering Observables'>
+        data-slide=25 title='Transforming Observables - flatmap'>
          25
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=26 title='Filtering Observables'>
+        data-slide=26 title='Transforming Observables - concatmap'>
          26
       </a>
     </li>
@@ -1283,152 +1306,164 @@ Observable.switchOnNext(o)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=28 title='Aggregate Operators - reduce'>
+        data-slide=28 title='Filtering Observables'>
          28
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=29 title='Aggregate Operators - reduce'>
+        data-slide=29 title='Filtering Observables'>
          29
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=30 title='Aggregate Operators - concat'>
+        data-slide=30 title='Aggregate Operators - reduce'>
          30
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=31 title='Combining Observables - merge'>
+        data-slide=31 title='Aggregate Operators - reduce'>
          31
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=32 title='Combining Observables - merge'>
+        data-slide=32 title='Aggregate Operators - concat'>
          32
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=33 title='Combining Observables - startWith'>
+        data-slide=33 title='Combining Observables - merge'>
          33
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=34 title='Combining Observables - startWith'>
+        data-slide=34 title='Combining Observables - merge'>
          34
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=35 title='Combining Observables - zip'>
+        data-slide=35 title='Combining Observables - startWith'>
          35
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=36 title='Combining Observables - zip'>
+        data-slide=36 title='Combining Observables - startWith'>
          36
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=37 title='Error Handling'>
+        data-slide=37 title='Combining Observables - zip'>
          37
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=38 title='Threading'>
+        data-slide=38 title='Combining Observables - zip'>
          38
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=39 title='Subjects'>
+        data-slide=39 title='Error Handling'>
          39
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=40 title='Subjects - How to use'>
+        data-slide=40 title='Threading'>
          40
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=41 title='RxJava on Android'>
+        data-slide=41 title='Subjects'>
          41
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=42 title='About Android Development'>
+        data-slide=42 title='Subjects - How to use'>
          42
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=43 title='RxAndroid'>
+        data-slide=43 title='RxJava on Android'>
          43
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=44 title='Let&#39;s Thinking in Functional Reactive'>
+        data-slide=44 title='About Android Development'>
          44
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=45 title='Case 1 - Say Hello to Callback Hell'>
+        data-slide=45 title='RxAndroid'>
          45
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=46 title='Case 1 - Say Hello to Callback Hell'>
+        data-slide=46 title='Let&#39;s Thinking in Functional Reactive'>
          46
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=47 title='Case 1 - Say Goodbye to Callback Hell'>
+        data-slide=47 title='Case 1 - Say Hello to Callback Hell'>
          47
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=48 title='Case 2 - All In One search'>
+        data-slide=48 title='Case 1 - Say Hello to Callback Hell'>
          48
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=49 title='Case 3 - A simple EventBus'>
+        data-slide=49 title='Case 1 - Say Goodbye to Callback Hell'>
          49
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=50 title='Case 4 - Input Suggestion'>
+        data-slide=50 title='Case 2 - All In One search'>
          50
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=51 title='Conclusion'>
+        data-slide=51 title='Case 3 - A simple EventBus'>
          51
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=52 title=''>
+        data-slide=52 title='Case 4 - Input Suggestion'>
          52
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=53 title='Conclusion'>
+         53
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=54 title=''>
+         54
       </a>
     </li>
   </ul>

@@ -40,7 +40,6 @@ img[alt=marble] {  margin-left: auto;margin-right: auto;width: 800px; }
 </style>
 
 ## About Me
-<!-- 
 
 Sam Lee (misgod.tw@gmail.com)
 <br/>
@@ -52,7 +51,6 @@ Sam Lee (misgod.tw@gmail.com)
  <li>Interested in Functional Programming</li>
  <li>Interested in Machine Learning and Data Analyst </li>
 </ul>
--->
 
 ---
 ## What Is Functional Reactive Programming
@@ -141,6 +139,18 @@ pushman.subscribe(new Action1<Integer>() {
 });  
 ```
 
+---
+## Observer pattern
+![marble](assets/img/observabl_pattern.png)
+
+*image from http://slides.com/yaroslavheriatovych/frponandroid*
+
+---
+## Functional Reactive
+![marble](assets/img/reactive_pattern.png)
+
+*image from http://slides.com/yaroslavheriatovych/frponandroid*
+
 --- .segue .dark  
 ## Lambda Expression
 
@@ -195,6 +205,27 @@ aObservable.filter(n -> n % 2 == 0)
 ## rx.Observable 
 
 ---
+## Creating Observable - just
+![marble](http://github.com/ReactiveX/RxJava/wiki/images/rx-operators/just.png)
+```java
+Observable<List<String>> ob = Observable.just(aList);
+Observable<String> ob2 = Observable.just("Some String");
+```
+
+---
+## Creating Observable - from
+![marble](http://github.com/ReactiveX/RxJava/wiki/images/rx-operators/from.png)
+```java
+List<String>  aList = ...;
+Observable<String> ob = Observable.from(aList);
+```
+
+---
+## Creating Observable - create
+
+![marble](http://github.com/ReactiveX/RxJava/wiki/images/rx-operators/create.png)
+
+---
 ## Creating Observable - create
 
 ```java
@@ -210,27 +241,6 @@ ob = Observable.create(subscriber -> {
         subscriber.onError(e);
     }
 });
-```
-
----
-## Creating Observable - create
-
-![marble](http://github.com/ReactiveX/RxJava/wiki/images/rx-operators/create.png)
-
----
-## Creating Observable - from
-![marble](http://github.com/ReactiveX/RxJava/wiki/images/rx-operators/from.png)
-```java
-List<String>  aList = ...;
-Observable<String> ob = Observable.from(aList);
-```
-
----
-## Creating Observable - just
-![marble](http://github.com/ReactiveX/RxJava/wiki/images/rx-operators/just.png)
-```java
-Observable<List<String>> ob = Observable.just(aList);
-Observable<String> ob2 = Observable.just("Some String");
 ```
 
 ---

@@ -39,7 +39,8 @@ code {
 img[alt=marble] {  margin-left: auto;margin-right: auto;width: 800px; }
 </style>
 
-## About Me .
+## About Me
+<!-- 
 
 Sam Lee (misgod.tw@gmail.com)
 <br/>
@@ -51,6 +52,7 @@ Sam Lee (misgod.tw@gmail.com)
  <li>Interested in Functional Programming</li>
  <li>Interested in Machine Learning and Data Analyst </li>
 </ul>
+-->
 
 ---
 ## What Is Functional Reactive Programming

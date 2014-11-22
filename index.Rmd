@@ -40,17 +40,18 @@ img[alt=marble] {  margin-left: auto;margin-right: auto;width: 800px; }
 </style>
 
 ## About Me
-
-Sam Lee (misgod.tw@gmail.com)
 <br/>
 
-<ul class="build fade">
- <li>A software engineer lives in Tainan</li>
- <li>Work for htc</li>
- <li>Most used Clojure, Scala and Java</li>
- <li>Interested in Functional Programming</li>
- <li>Interested in Machine Learning and Data Analyst </li>
-</ul>
+**Sam Lee** (misgod.tw@gmail.com)
+
+<br/>
+
+* A software engineer lives in Tainan
+* Work for htc
+* Most used Clojure, Scala and Java
+* Interested in Functional Programming
+* Interested in Machine Learning and Data Analyst
+
 
 ---
 ## What Is Functional Reactive Programming
@@ -115,7 +116,7 @@ aObservable.map(x -> x*x) //Square
 |asynchronous |Future\<T> getData() |<r>**Observable**\<T></r> getData()|
 
 ---
-## Asynchronous/Push & Synchronous/Pull  
+## Observable is "dual" to Iterable
 
 |event         |Iterable (pull) |Observable (push)
 |--------------|----------------|-------------------
@@ -124,6 +125,8 @@ aObservable.map(x -> x*x) //Square
 |complete 	   |!hasNext() 	    |onCompleted()
 
 ![push](assets/img/push.png)
+
+http://csl.stanford.edu/~christos/pldi2010.fit/meijer.duality.pdf
 
 ---
 ## Observable & Observer  
@@ -201,6 +204,11 @@ aObservable.filter(n -> n % 2 == 0)
 * Gradle plugin
   - https://github.com/evant/gradle-retrolambda
 
+---
+## Retrolambda
+
+![Retrolambda](assets/img/retrolambda.png)
+
 --- .segue .dark  
 ## rx.Observable 
 
@@ -259,17 +267,6 @@ ob = Observable.create(subscriber -> {
 * error( )
 
 https://github.com/ReactiveX/RxJava/wiki/Creating-Observables
-
----
-## Hot and Cold Observables
-<br/>
-
-* <gg> A **“hot”** Observable may begins emitting items as soon as it is created.</gg>
-
-<br/>
-
-* <gg> A **“cold”** Observable waits to emitting items until observer subscribes , and so an observer can see the whole sequenceg.</gg>
-
 
 ---
 ## Transforming Observables - map
@@ -356,6 +353,7 @@ Observable.range(0, 10)
 * sample( )
 * more...
 
+https://github.com/ReactiveX/RxJava/wiki/Filtering-Observables
 
 ---
 ## Aggregate Operators - reduce
@@ -482,6 +480,12 @@ https://github.com/ReactiveX/RxJava/wiki/Scheduler
 ## Subjects
 ### A Subject  = Subscriber + Observable
 
+![](assets/img/subject.png)
+
+---
+## Subjects
+<br/>
+
 * PublishSubject
 
 * BehaviorSubject
@@ -519,6 +523,19 @@ subject.onCompleted();
 
 * Masking a Subject as an Observable - <b>aSubject.asObservable()</b>
 
+---
+## Hot and Cold Observables
+<br/>
+
+* <gg> A **“cold”** Observable waits to emitting items until observer subscribes , and so an observer can see the whole sequenceg.</gg>
+
+<br/>
+
+* <gg> A **“hot”** Observable may begins emitting items as soon as it is created.</gg>
+
+
+
+
 --- .segue  .dark
 ## RxJava on Android 
 
@@ -545,7 +562,8 @@ subject.onCompleted();
 ---
 ## RxAndroid
 
-* RxJava bindings for Android
+* Android specific bindings for RxJava.
+  - https://github.com/ReactiveX/RxAndroid
 
 * Scheduler  on  main UI thread or a given Android Handler thread.
   - AndroidSchedulers
@@ -555,11 +573,11 @@ subject.onCompleted();
   - AndroidObservable
   - ViewObservable
 
-
 ### Don't forget to unsubscribe to avoid memory leak!
 
+
 --- .segue  .dark
-## Let's Thinking in Functional Reactive
+## Thinking in Functional Reactive
 
 ---
 ## Case 1 - Say Hello to Callback Hell
@@ -686,14 +704,17 @@ Observable.switchOnNext(o)
 
 ---
 ## Conclusion
+<br/>
 
-1. Functional Reactive makes async/state design straightforward.
+<ol class="build fade">
+  <li>Functional Reactive makes async/state design straightforward.</li>
 
-2. RxJava is not just a library. It's a framework!
+  <li>RxJava is not just a library.</li>
 
-3. The most important part is Functional Reactive Thinking.
+  <li>The most important is Functional Reactive Thinking. </li>
 
-4. Try It in your next project!
+  <li>Try It in your next project!</li>
+</ol>
 
 --- #qa
 <style>

@@ -81,15 +81,18 @@ img[alt=marble] {  margin-left: auto;margin-right: auto;width: 800px; }
 
 <h2>About Me</h2>
 
-<p>Sam Lee (<a href="mailto:misgod.tw@gmail.com">misgod.tw@gmail.com</a>)
-<br/></p>
+<p><br/></p>
 
-<ul class="build fade">
- <li>A software engineer lives in Tainan</li>
- <li>Work for htc</li>
- <li>Most used Clojure, Scala and Java</li>
- <li>Interested in Functional Programming</li>
- <li>Interested in Machine Learning and Data Analyst </li>
+<p><strong>Sam Lee</strong> (<a href="mailto:misgod.tw@gmail.com">misgod.tw@gmail.com</a>)</p>
+
+<p><br/></p>
+
+<ul>
+<li>A software engineer lives in Tainan</li>
+<li>Work for htc</li>
+<li>Most used Clojure, Scala and Java</li>
+<li>Interested in Functional Programming</li>
+<li>Interested in Machine Learning and Data Analyst</li>
 </ul>
 
   </article>
@@ -207,7 +210,7 @@ img[alt=marble] {  margin-left: auto;margin-right: auto;width: 800px; }
 
 <slide class="" id="slide-7" style="background:;">
   <hgroup>
-    <h2>Asynchronous/Push &amp; Synchronous/Pull</h2>
+    <h2>Observable is &quot;dual&quot; to Iterable</h2>
   </hgroup>
   <article data-timings="">
     <table><thead>
@@ -235,6 +238,8 @@ img[alt=marble] {  margin-left: auto;margin-right: auto;width: 800px; }
 </tbody></table>
 
 <p><img src="assets/img/push.png" alt="push"></p>
+
+<p><a href="http://csl.stanford.edu/%7Echristos/pldi2010.fit/meijer.duality.pdf">http://csl.stanford.edu/~christos/pldi2010.fit/meijer.duality.pdf</a></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -375,7 +380,18 @@ img[alt=marble] {  margin-left: auto;margin-right: auto;width: 800px; }
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue dark" id="slide-15" style="background:;">
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Retrolambda</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/retrolambda.png" alt="Retrolambda"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-16" style="background:;">
   <hgroup>
     <h2>rx.Observable</h2>
   </hgroup>
@@ -385,7 +401,7 @@ img[alt=marble] {  margin-left: auto;margin-right: auto;width: 800px; }
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-16" style="background:;">
+<slide class="" id="slide-17" style="background:;">
   <hgroup>
     <h2>Creating Observable - just</h2>
   </hgroup>
@@ -400,7 +416,7 @@ Observable&lt;String&gt; ob2 = Observable.just(&quot;Some String&quot;);
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-17" style="background:;">
+<slide class="" id="slide-18" style="background:;">
   <hgroup>
     <h2>Creating Observable - from</h2>
   </hgroup>
@@ -415,7 +431,7 @@ Observable&lt;String&gt; ob = Observable.from(aList);
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-18" style="background:;">
+<slide class="" id="slide-19" style="background:;">
   <hgroup>
     <h2>Creating Observable - create</h2>
   </hgroup>
@@ -426,7 +442,7 @@ Observable&lt;String&gt; ob = Observable.from(aList);
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-19" style="background:;">
+<slide class="" id="slide-20" style="background:;">
   <hgroup>
     <h2>Creating Observable - create</h2>
   </hgroup>
@@ -449,7 +465,7 @@ Observable&lt;String&gt; ob = Observable.from(aList);
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-20" style="background:;">
+<slide class="" id="slide-21" style="background:;">
   <hgroup>
     <h2>Creating Observable ...</h2>
   </hgroup>
@@ -464,27 +480,6 @@ Observable&lt;String&gt; ob = Observable.from(aList);
 </ul>
 
 <p><a href="https://github.com/ReactiveX/RxJava/wiki/Creating-Observables">https://github.com/ReactiveX/RxJava/wiki/Creating-Observables</a></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-21" style="background:;">
-  <hgroup>
-    <h2>Hot and Cold Observables</h2>
-  </hgroup>
-  <article data-timings="">
-    <p><br/></p>
-
-<ul>
-<li><gg> A <strong>“hot”</strong> Observable may begins emitting items as soon as it is created.</gg></li>
-</ul>
-
-<p><br/></p>
-
-<ul>
-<li><gg> A <strong>“cold”</strong> Observable waits to emitting items until observer subscribes , and so an observer can see the whole sequenceg.</gg></li>
-</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -626,6 +621,8 @@ done
 <li>sample( )</li>
 <li>more...</li>
 </ul>
+
+<p><a href="https://github.com/ReactiveX/RxJava/wiki/Filtering-Observables">https://github.com/ReactiveX/RxJava/wiki/Filtering-Observables</a></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -822,6 +819,19 @@ c_C
   <article data-timings="">
     <h3>A Subject  = Subscriber + Observable</h3>
 
+<p><img src="assets/img/subject.png" alt=""></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-42" style="background:;">
+  <hgroup>
+    <h2>Subjects</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br/></p>
+
 <ul>
 <li><p>PublishSubject</p></li>
 <li><p>BehaviorSubject</p></li>
@@ -837,7 +847,7 @@ c_C
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-42" style="background:;">
+<slide class="" id="slide-43" style="background:;">
   <hgroup>
     <h2>Subjects - How to use</h2>
   </hgroup>
@@ -868,7 +878,28 @@ subject.onCompleted();
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue dark" id="slide-43" style="background:;">
+<slide class="" id="slide-44" style="background:;">
+  <hgroup>
+    <h2>Hot and Cold Observables</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br/></p>
+
+<ul>
+<li><gg> A <strong>“cold”</strong> Observable waits to emitting items until observer subscribes , and so an observer can see the whole sequenceg.</gg></li>
+</ul>
+
+<p><br/></p>
+
+<ul>
+<li><gg> A <strong>“hot”</strong> Observable may begins emitting items as soon as it is created.</gg></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-45" style="background:;">
   <hgroup>
     <h2>RxJava on Android</h2>
   </hgroup>
@@ -878,7 +909,7 @@ subject.onCompleted();
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-44" style="background:;">
+<slide class="" id="slide-46" style="background:;">
   <hgroup>
     <h2>About Android Development</h2>
   </hgroup>
@@ -907,13 +938,17 @@ subject.onCompleted();
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-45" style="background:;">
+<slide class="" id="slide-47" style="background:;">
   <hgroup>
     <h2>RxAndroid</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li><p>RxJava bindings for Android</p></li>
+<li><p>Android specific bindings for RxJava.</p>
+
+<ul>
+<li><a href="https://github.com/ReactiveX/RxAndroid">https://github.com/ReactiveX/RxAndroid</a></li>
+</ul></li>
 <li><p>Scheduler  on  main UI thread or a given Android Handler thread.</p>
 
 <ul>
@@ -934,9 +969,9 @@ subject.onCompleted();
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue dark" id="slide-46" style="background:;">
+<slide class="segue dark" id="slide-48" style="background:;">
   <hgroup>
-    <h2>Let&#39;s Thinking in Functional Reactive</h2>
+    <h2>Thinking in Functional Reactive</h2>
   </hgroup>
   <article data-timings="">
     
@@ -944,7 +979,7 @@ subject.onCompleted();
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-47" style="background:;">
+<slide class="" id="slide-49" style="background:;">
   <hgroup>
     <h2>Case 1 - Say Hello to Callback Hell</h2>
   </hgroup>
@@ -973,7 +1008,7 @@ btnClick.setOnClickListener(new View.OnClickListener() {
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-48" style="background:;">
+<slide class="" id="slide-50" style="background:;">
   <hgroup>
     <h2>Case 1 - Say Hello to Callback Hell</h2>
   </hgroup>
@@ -998,7 +1033,7 @@ btnClick.setOnClickListener(new View.OnClickListener() {
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-49" style="background:;">
+<slide class="" id="slide-51" style="background:;">
   <hgroup>
     <h2>Case 1 - Say Goodbye to Callback Hell</h2>
   </hgroup>
@@ -1023,7 +1058,7 @@ ViewObservable.clicks(btnClick)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-50" style="background:;">
+<slide class="" id="slide-52" style="background:;">
   <hgroup>
     <h2>Case 2 - All In One search</h2>
   </hgroup>
@@ -1052,7 +1087,7 @@ Observable.merge(g, b, y)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-51" style="background:;">
+<slide class="" id="slide-53" style="background:;">
   <hgroup>
     <h2>Case 3 - A simple EventBus</h2>
   </hgroup>
@@ -1082,7 +1117,7 @@ subject.onNext(aRefreshAction);
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-52" style="background:;">
+<slide class="" id="slide-54" style="background:;">
   <hgroup>
     <h2>Case 4 - Input Suggestion</h2>
   </hgroup>
@@ -1107,16 +1142,21 @@ Observable.switchOnNext(o)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-53" style="background:;">
+<slide class="" id="slide-55" style="background:;">
   <hgroup>
     <h2>Conclusion</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li><p>Functional Reactive makes async/state design straightforward.</p></li>
-<li><p>RxJava is not just a library. It&#39;s a framework!</p></li>
-<li><p>The most important part is Functional Reactive Thinking.</p></li>
-<li><p>Try It in your next project!</p></li>
+    <p><br/></p>
+
+<ol class="build fade">
+  <li>Functional Reactive makes async/state design straightforward.</li>
+
+  <li>RxJava is not just a library.</li>
+
+  <li>The most important is Functional Reactive Thinking. </li>
+
+  <li>Try It in your next project!</li>
 </ol>
 
   </article>
@@ -1180,7 +1220,7 @@ Observable.switchOnNext(o)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Asynchronous/Push &amp; Synchronous/Pull'>
+        data-slide=7 title='Observable is &quot;dual&quot; to Iterable'>
          7
       </a>
     </li>
@@ -1228,25 +1268,25 @@ Observable.switchOnNext(o)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='rx.Observable'>
+        data-slide=15 title='Retrolambda'>
          15
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='Creating Observable - just'>
+        data-slide=16 title='rx.Observable'>
          16
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='Creating Observable - from'>
+        data-slide=17 title='Creating Observable - just'>
          17
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='Creating Observable - create'>
+        data-slide=18 title='Creating Observable - from'>
          18
       </a>
     </li>
@@ -1258,13 +1298,13 @@ Observable.switchOnNext(o)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='Creating Observable ...'>
+        data-slide=20 title='Creating Observable - create'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Hot and Cold Observables'>
+        data-slide=21 title='Creating Observable ...'>
          21
       </a>
     </li>
@@ -1390,80 +1430,92 @@ Observable.switchOnNext(o)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=42 title='Subjects - How to use'>
+        data-slide=42 title='Subjects'>
          42
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=43 title='RxJava on Android'>
+        data-slide=43 title='Subjects - How to use'>
          43
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=44 title='About Android Development'>
+        data-slide=44 title='Hot and Cold Observables'>
          44
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=45 title='RxAndroid'>
+        data-slide=45 title='RxJava on Android'>
          45
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=46 title='Let&#39;s Thinking in Functional Reactive'>
+        data-slide=46 title='About Android Development'>
          46
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=47 title='Case 1 - Say Hello to Callback Hell'>
+        data-slide=47 title='RxAndroid'>
          47
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=48 title='Case 1 - Say Hello to Callback Hell'>
+        data-slide=48 title='Thinking in Functional Reactive'>
          48
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=49 title='Case 1 - Say Goodbye to Callback Hell'>
+        data-slide=49 title='Case 1 - Say Hello to Callback Hell'>
          49
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=50 title='Case 2 - All In One search'>
+        data-slide=50 title='Case 1 - Say Hello to Callback Hell'>
          50
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=51 title='Case 3 - A simple EventBus'>
+        data-slide=51 title='Case 1 - Say Goodbye to Callback Hell'>
          51
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=52 title='Case 4 - Input Suggestion'>
+        data-slide=52 title='Case 2 - All In One search'>
          52
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=53 title='Conclusion'>
+        data-slide=53 title='Case 3 - A simple EventBus'>
          53
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=54 title=''>
+        data-slide=54 title='Case 4 - Input Suggestion'>
          54
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=55 title='Conclusion'>
+         55
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=56 title=''>
+         56
       </a>
     </li>
   </ul>

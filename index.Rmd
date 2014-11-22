@@ -74,14 +74,14 @@ aObservable.map(x -> x*x) //Square
 
 ---
 ## Why Functional Reactive Programming
-
+<br/>
 * Writing concurrent programs correct is difficult.
 
-* You can transform & compose  asynchronous operations.
+>> * You can transform & compose  asynchronous operations.
     
-* High-level abstractions    
+>> * High-level abstractions    
 
-* Standard error handling
+>> * Standard error handling
 
 ---
 ## Say Hello to Rx family
@@ -102,12 +102,19 @@ aObservable.map(x -> x*x) //Square
 
 ---
 ## Introduce to RxJava
+<br/>
+https://github.com/ReactiveX/RxJava
 
-* RxJava is a JVM implementation of Reactive Extensions
-* RxJava extends Observer pattern to support data/event and compose operators in abstract.
-* Built by Netflix
-* Support Java 6+ & Android 2.3+
-* Java 8 lambda support
+>> * RxJava is a JVM implementation of Reactive Extensions
+
+>> * RxJava extends Observer pattern to support data/event and compose operators in abstract.
+
+>> * Built by Netflix
+
+>> * Support Java 6+ & Android 2.3+
+
+>> * Java 8 lambda support
+
 
 ---
 ## Iterable / Observable

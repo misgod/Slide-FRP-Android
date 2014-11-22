@@ -117,7 +117,7 @@ https://github.com/ReactiveX/RxJava
 
 
 ---
-## Iterable / Observable
+## Asynchronous sequences of multiple items
 <br/>
 
 

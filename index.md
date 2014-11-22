@@ -47,9 +47,13 @@ img[alt=marble] {  margin-left: auto;margin-right: auto;width: 800px; }
 <br/>
 
 * A software engineer lives in Tainan
+
 * Work for htc
+
 * Most used Clojure, Scala and Java
+
 * Interested in Functional Programming
+
 * Interested in Machine Learning and Data Analyst
 
 
